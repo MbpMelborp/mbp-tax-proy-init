@@ -10,7 +10,9 @@
         />
       </client-only>
     </div>
-    <div class="bg-primary-100 dark:bg-primary-900 flex h-full w-full items-center justify-center md:w-1/2">
+    <div
+      class="flex h-full w-full items-center justify-center bg-gray-100 md:w-1/2 dark:bg-gray-800"
+    >
       <slot />
     </div>
   </div>

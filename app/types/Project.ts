@@ -1,6 +1,7 @@
 export type Project = {
   info?: ProjectInfo;
   templates?: Template[];
+  images?: string[];
 };
 
 export type ProjectInfo = {

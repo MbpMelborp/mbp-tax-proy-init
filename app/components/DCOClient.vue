@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import pro from "@nuxt/ui-pro/modules/pro";
 import { Client, Project } from "~/types";
 const props = defineProps<{
   size?: string;
@@ -18,6 +19,7 @@ const fetchProjects = async () => {
   }
   for (const project of props.client.projects) {
     const info: Project = await dco.dco_get_project(project.uid, project.api);
+    info.images = project.images;
     if (info) {
       projects.value.push(info);
     }

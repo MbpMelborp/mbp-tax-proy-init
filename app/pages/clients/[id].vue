@@ -32,6 +32,7 @@ const fetchProjects = async () => {
   projects.value = [];
   for (const project of client.value.projects) {
     const info: Project = await dco.dco_get_project(project.uid, project.api);
+    info.images = project.images;
     if (info !== null || info !== undefined) {
       projects.value.push(info);
     }

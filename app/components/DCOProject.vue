@@ -30,6 +30,9 @@ const props = defineProps<{
       <li>
         <b>Templates: </b><span>{{ project.info.templates }}</span>
       </li>
+      <li v-if="project.images?.length > 0">
+        <b>Generadas: </b><span>{{ project.images?.length }}</span>
+      </li>
     </ul>
 
     <template #footer>

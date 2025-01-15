@@ -13,7 +13,7 @@ const ui = useUIM();
 
 const route = useRoute();
 const client = ref({} as Client);
-
+const saved = ref(false);
 onBeforeMount(() => {
   if (!route.params.client || typeof route.params.client !== "string") {
     throw new Error("Invalid route parameter 'client'");
@@ -33,6 +33,7 @@ const fetchProjects = async () => {
   }
   const project = client.value.projects.find((project) => project.uid === route.params.project);
   const projectInfo: Project = await dco.dco_get_project(project.uid, project.api);
+  projectInfo.images = project.images;
   loaded.value = true;
   return projectInfo;
 };
@@ -64,12 +65,46 @@ const breadcrumb = [
     to: "/clients/" + route.params.client + "/" + route.params.project,
   },
 ];
+
+watch(client_ref, async (newVal, oldVal) => {
+  if (newVal && newVal !== oldVal) {
+    client.value = {
+      id: doc_client.id,
+      ...newVal,
+    };
+    project.value = await fetchProjects();
+  }
+});
+
+// Add these functions in the parent component
+const handleCopyImage = async (image: string) => {
+  // Copy image implementation
+};
+
+const handleDownloadImage = async (image: string) => {
+  // Download image implementation
+};
+
+const handleRemoveImage = async (image: string) => {
+  if (!project.value?.images) return;
+
+  try {
+    // Implement your image removal logic here
+    project.value.images = project.value.images.filter((img) => img !== image);
+    useToast().add({
+      title: "Imagen eliminada",
+      color: "green",
+    });
+  } catch (error) {
+    useToast().add({
+      title: "Error al eliminar la imagen",
+      color: "red",
+    });
+  }
+};
 </script>
 
 <template>
-  <!-- <Pre>
-    {{ client }}
-  </Pre> -->
   <UDashboardPage class="dco-template-page" v-auto-animate>
     <UDashboardPanel grow>
       <UDashboardNavbar>
@@ -101,6 +136,7 @@ const breadcrumb = [
           </UTooltip>
         </template>
       </UDashboardNavbar>
+      <!-- <Pre>{{ project }}</Pre> -->
       <UDashboardPanelContent v-if="client && project && loaded">
         <UDashboardSection
           :title="`${client.name} - ${project.info.name}`"
@@ -110,6 +146,21 @@ const breadcrumb = [
           :ui="{
             title: 'text-3xl font-bold',
           }"
+          :links="
+            project.images
+              ? [
+                  {
+                    label: 'Ver imagenes generadas',
+                    color: 'lime',
+                    icon: 'i-heroicons-photo',
+                    variant: 'outline',
+                    click: () => {
+                      saved = true;
+                    },
+                  },
+                ]
+              : []
+          "
         >
           <template #icon>
             <UAvatar :alt="project.info.name" size="xl" class="bg-rose-100 text-rose-800" />
@@ -135,6 +186,14 @@ const breadcrumb = [
         </UPageGrid>
       </UDashboardPanelContent>
       <Skeleton v-else />
+      <DCOSide
+        v-if="project"
+        v-model:saved="saved"
+        :images="project.images"
+        @copy-image="handleCopyImage"
+        @download-image="handleDownloadImage"
+        @remove-image="handleRemoveImage"
+      />
     </UDashboardPanel>
   </UDashboardPage>
 </template>

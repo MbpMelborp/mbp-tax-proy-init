@@ -8,4 +8,5 @@ export interface ProjectC {
   api: string;
   uid: string;
   name: string;
+  media?: string[];
 }

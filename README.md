@@ -1,3 +1,15 @@
+# Proyecto MBP Tax Proy Init
+
+Este proyecto es una aplicación web desarrollada con Nuxt UI Pro. Su objetivo principal es proporcionar una interfaz de usuario minimalista y profesional para gestionar tareas relacionadas con impuestos. La aplicación incluye funcionalidades para la gestión de datos fiscales, generación de reportes y análisis de información tributaria.
+
+## Características principales
+
+- Interfaz de usuario moderna y responsiva.
+- Integración con servicios de terceros para la obtención de datos fiscales.
+- Generación de reportes personalizados.
+- Análisis y visualización de datos tributarios.
+- Autenticación y autorización de usuarios.
+
 ![nuxt-ui-minimal-starter-social-card](https://github.com/nuxt-ui-pro/starter/assets/739984/2ab2f391-718f-4188-95db-20b8768bbf9d)
 
 # Nuxt UI Pro - Starter
