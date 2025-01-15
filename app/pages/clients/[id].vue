@@ -126,7 +126,6 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     });
   }
 }
-
 // Breadcrumb configuration
 const breadcrumb = computed(() => [
   {
