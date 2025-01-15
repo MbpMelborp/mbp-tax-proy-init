@@ -104,7 +104,8 @@ export default defineNuxtConfig({
       // routes: ["/", "/analytics"],
       ignore: ["/"],
     },
-    preset: "firebase",
+    // preset: "firebase",
+    preset: "vercel-edge",
 
     // for the upcoming preset
     firebase: {
