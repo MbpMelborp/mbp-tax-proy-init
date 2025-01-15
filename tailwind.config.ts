@@ -1,0 +1,91 @@
+import type { _primary } from "#tailwind-config/theme/placeholderColor";
+import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
+
+export default <Partial<Config>>{
+  content: [
+    "./components/**/*.{vue,js,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./nuxt.config.{js,ts}",
+    "./app.vue",
+    "./assets/**/*.css",
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ["DM Sans", ...defaultTheme.fontFamily.sans],
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
+      },
+      colors: {
+        amber: {
+          DEFAULT: "#e2dfda",
+          "50": "#f7f6f5",
+          "100": "#edebe7",
+          "200": "#e2dfda",
+          "300": "#c1bbb0",
+          "400": "#a79c90",
+          "500": "#968879",
+          "600": "#897a6d",
+          "700": "#72645c",
+          "800": "#5e534e",
+          "900": "#4e4540",
+          "950": "#292421",
+        },
+        cool: {
+          DEFAULT: "#989898",
+          "50": "#f8f8f8",
+          "100": "#f3f3f3",
+          "200": "#dcdcdc",
+          "300": "#bdbdbd",
+          "400": "#989898",
+          "500": "#7c7c7c",
+          "600": "#656565",
+          "700": "#525252",
+          "800": "#464646",
+          "900": "#3d3d3d",
+          "950": "#292929",
+        },
+        estrategia: {
+          DEFAULT: "#F59E0B",
+          50: "#FEF6E7",
+          100: "#FDECCF",
+          200: "#FBD89E",
+          300: "#F9C56D",
+          400: "#F7B13C",
+          500: "#F59E0B",
+          600: "#C07C08",
+          700: "#8A5906",
+          800: "#543603",
+          900: "#1E1401",
+          950: "#030200",
+        },
+        chat: {
+          DEFAULT: "#EF4444",
+          50: "#FDEDED",
+          100: "#FCDADA",
+          200: "#F9B5B5",
+          300: "#F58F8F",
+          400: "#F26A6A",
+          500: "#EF4444",
+          600: "#E71414",
+          700: "#B30F0F",
+          800: "#800B0B",
+          900: "#4C0707",
+          950: "#320404",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      aspectRatio: {
+        "4/3": "4 / 3",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animated"), require("tailwindcss-debug-screens")],
+};

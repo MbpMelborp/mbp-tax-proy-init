@@ -1,0 +1,14 @@
+navigation: false
+hero:
+  title: Bienvenido
+  description: "Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.<br>It includes all primitives to build landing pages, documentation, blogs, changelog, dashboards or entire SaaS products."
+  links:
+    - label: Get Started
+      to: /pro/getting-starated
+      size: lg
+      icon: i-heroicons-rocket-launch
+    - label: Buy now
+      to: /pro/pricing
+      color: gray
+      icon: i-heroicons-credit-card
+      size: lg
