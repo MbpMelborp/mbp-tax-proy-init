@@ -13,7 +13,7 @@ const emit = defineEmits<{
   "remove-image": [image: string];
 }>();
 
-const { copyImage, downloadImage, isLoading } = useImages();
+const { copyImage, downloadImage, isLoading } = useImg();
 const previewImage = ref<string | null>(null);
 
 const handleRemove = async (image: string) => {

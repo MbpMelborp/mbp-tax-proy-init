@@ -55,7 +55,7 @@ const fetchProjects = async () => {
   );
   api.value = project.api;
   const projectInfo = await dco.dco_get_project(project.uid, project.api);
-  projectInfo.images = project.images;
+  projectInfo.images = project.images ? project.images : [];
   if (!projectInfo) {
     throw new Error("Project not found");
   }
@@ -581,7 +581,7 @@ const removeImage = async (url: string) => {
             title: 'text-3xl font-bold',
           }"
           :links="
-            currentProject.images
+            currentProject.images.length > 0
               ? [
                   {
                     label: 'Ver imagenes generadas',

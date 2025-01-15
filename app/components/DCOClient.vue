@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import pro from "@nuxt/ui-pro/modules/pro";
 import { Client, Project } from "~/types";
+
 const props = defineProps<{
   size?: string;
   client: Client;
@@ -9,37 +10,96 @@ const props = defineProps<{
 const ui = useUIM();
 const dco = useDCO();
 const loaded = ref(false);
-
+const loading = ref(false);
+const error = ref<string | null>(null);
 const projects = ref<Project[]>([]);
 
 const fetchProjects = async () => {
-  if (props.client.projects.length === 0) {
-    loaded.value = true;
+  if (!props.client?.projects) {
+    console.debug("No client projects found");
     return;
   }
-  for (const project of props.client.projects) {
-    const info: Project = await dco.dco_get_project(project.uid, project.api);
-    info.images = project.images;
-    if (info) {
-      projects.value.push(info);
+
+  loading.value = true;
+  error.value = null;
+
+  try {
+    console.debug("Fetching projects for client:", props.client.name);
+
+    if (props.client.projects.length === 0) {
+      projects.value = [];
+      console.debug("Client has no projects");
+      return;
     }
+
+    const projectPromises = props.client.projects.map(async (project) => {
+      try {
+        console.debug("Fetching project:", project.uid);
+        const info: Project = await dco.dco_get_project(project.uid, project.api);
+        if (info) {
+          return {
+            ...info,
+            images: project.images || [],
+          };
+        }
+      } catch (err) {
+        console.error(`Error fetching project ${project.uid}:`, err);
+        error.value = `Error loading project ${project.uid}`;
+      }
+      return null;
+    });
+
+    const results = await Promise.all(projectPromises);
+    projects.value = results.filter((project): project is Project => project !== null);
+    console.debug("Loaded projects:", projects.value.length);
+  } catch (err) {
+    console.error("Error fetching projects:", err);
+    error.value = "Error loading projects";
+  } finally {
+    loading.value = false;
+    loaded.value = true;
   }
-  loaded.value = true;
 };
-fetchProjects();
+
+// Deep watch for client changes including projects
+watch(
+  () => props.client,
+  (newClient) => {
+    console.debug("Client changed, refetching projects");
+    if (newClient) {
+      fetchProjects();
+    }
+  },
+  { immediate: true, deep: true }
+);
+
+// Add mounted hook for initial fetch
+onMounted(() => {
+  console.debug("Component mounted, initial fetch");
+  fetchProjects();
+});
 </script>
+
 <template>
   <template v-if="loaded" v-auto-animate>
     <UPageCard :ui="ui.page_card" class="dco_client">
       <template #title>
         <h1 class="text-2xl font-semibold leading-6">{{ client.name }}</h1>
       </template>
-      <template #icon
-        ><UAvatar :alt="client.name" size="xl" class="bg-rose-100 text-rose-800"
-      /></template>
+      <template #icon>
+        <UAvatar :alt="client.name" size="xl" class="bg-rose-100 text-rose-800" />
+      </template>
 
       <template #default>
-        <template v-if="projects.length > 0">
+        <div v-if="loading" class="flex justify-center p-4">
+          <USpinner />
+        </div>
+
+        <div v-else-if="error" class="p-4 text-red-500">
+          {{ error }}
+        </div>
+
+        <template v-else-if="projects.length > 0">
           <template v-if="size != 'list'">
             <div class="flex flex-col gap-1">
               <p class="text-sm">Listado de proyectos activos</p>
@@ -49,8 +109,8 @@ fetchProjects();
                   wrapper: 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-2',
                 }"
               >
-                <template v-for="(project, index) in projects">
-                  <DCOProject v-if="project" :key="index" :client="client.id" :project="project" />
+                <template v-for="(project, index) in projects" :key="index">
+                  <DCOProject v-if="project" :client="client.id" :project="project" />
                 </template>
               </UPageGrid>
             </div>
@@ -82,8 +142,8 @@ fetchProjects();
               </template>
             </UCarousel>
             <template v-else>
-              <template v-for="(project, index) in projects">
-                <DCOProject v-if="project" :key="index" :client="client.id" :project="project" />
+              <template v-for="(project, index) in projects" :key="index">
+                <DCOProject v-if="project" :client="client.id" :project="project" />
               </template>
             </template>
             <UDivider class="mb-4 mt-auto" />

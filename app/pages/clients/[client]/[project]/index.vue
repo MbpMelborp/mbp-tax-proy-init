@@ -1,19 +1,28 @@
 <script setup lang="ts">
 import { useCurrentUser, useFirestore, useCollection, useDocument } from "vuefire";
 import { collection, doc } from "firebase/firestore";
-
 import type { Project, Client } from "~/types/";
 
+// Composables
 const dco = useDCO();
+const ui = useUIM();
+const route = useRoute();
+const { isNotificationsSlideoverOpen, links } = useDashboard();
 
+// State
 const loaded = ref(false);
+const client = ref({} as Client);
+const project = ref<Project>();
+const saved = ref(false);
+
+// Firebase
 const db = useFirestore();
 const user = useCurrentUser();
-const ui = useUIM();
+const doc_client = doc(collection(db, "dco"), route.params.client);
+const contactSource = computed(() => doc_client);
+const client_ref = useDocument(contactSource);
 
-const route = useRoute();
-const client = ref({} as Client);
-const saved = ref(false);
+// Route validation
 onBeforeMount(() => {
   if (!route.params.client || typeof route.params.client !== "string") {
     throw new Error("Invalid route parameter 'client'");
@@ -22,37 +31,8 @@ onBeforeMount(() => {
     throw new Error("Invalid route parameter 'project'");
   }
 });
-const doc_client = doc(collection(db, "dco"), route.params.client);
-const contactSource = computed(() => doc_client);
-const client_ref = useDocument(contactSource);
-const project = ref<Project>();
 
-const fetchProjects = async () => {
-  if (client.value.projects.length === 0) {
-    return;
-  }
-  const project = client.value.projects.find((project) => project.uid === route.params.project);
-  const projectInfo: Project = await dco.dco_get_project(project.uid, project.api);
-  projectInfo.images = project.images;
-  loaded.value = true;
-  return projectInfo;
-};
-
-watch(client_ref, async (newVal, oldVal) => {
-  if (newVal && newVal !== oldVal) {
-    client.value = {
-      id: doc_client.id,
-      ...newVal,
-    };
-    project.value = await fetchProjects();
-  }
-});
-
-definePageMeta({
-  middleware: ["auth"],
-});
-
-const { isNotificationsSlideoverOpen, links } = useDashboard();
+// Breadcrumb configuration
 const breadcrumb = [
   {
     label: links[1]?.label || "",
@@ -66,30 +46,87 @@ const breadcrumb = [
   },
 ];
 
+// Data fetching
+const fetchProjects = async () => {
+  if (!client.value?.projects) {
+    loaded.value = true;
+    return null;
+  }
+
+  const projectData = client.value.projects.find((p) => p.uid === route.params.project);
+
+  if (!projectData) {
+    loaded.value = true;
+    return null;
+  }
+
+  try {
+    const projectInfo: Project = await dco.dco_get_project(projectData.uid, projectData.api);
+    projectInfo.images = projectData.images || [];
+    return projectInfo;
+  } catch (error) {
+    console.error("Error fetching project:", error);
+    return null;
+  } finally {
+    loaded.value = true;
+  }
+};
+
+// Watchers
 watch(client_ref, async (newVal, oldVal) => {
   if (newVal && newVal !== oldVal) {
     client.value = {
       id: doc_client.id,
       ...newVal,
     };
+
+    await nextTick();
     project.value = await fetchProjects();
   }
 });
 
-// Add these functions in the parent component
+// Event handlers
 const handleCopyImage = async (image: string) => {
-  // Copy image implementation
+  // Implement copy functionality
+  try {
+    await navigator.clipboard.writeText(image);
+    useToast().add({
+      title: "URL copiada al portapapeles",
+      color: "green",
+    });
+  } catch (error) {
+    useToast().add({
+      title: "Error al copiar la URL",
+      color: "red",
+    });
+  }
 };
 
 const handleDownloadImage = async (image: string) => {
-  // Download image implementation
+  // Implement download functionality
+  try {
+    const response = await fetch(image);
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `image-${Date.now()}.jpg`;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+  } catch (error) {
+    useToast().add({
+      title: "Error al descargar la imagen",
+      color: "red",
+    });
+  }
 };
 
 const handleRemoveImage = async (image: string) => {
   if (!project.value?.images) return;
 
   try {
-    // Implement your image removal logic here
     project.value.images = project.value.images.filter((img) => img !== image);
     useToast().add({
       title: "Imagen eliminada",
@@ -102,11 +139,17 @@ const handleRemoveImage = async (image: string) => {
     });
   }
 };
+
+// Page meta
+definePageMeta({
+  middleware: ["auth"],
+});
 </script>
 
 <template>
   <UDashboardPage class="dco-template-page" v-auto-animate>
     <UDashboardPanel grow>
+      <!-- Navbar -->
       <UDashboardNavbar>
         <template #left>
           <UBreadcrumb
@@ -136,56 +179,62 @@ const handleRemoveImage = async (image: string) => {
           </UTooltip>
         </template>
       </UDashboardNavbar>
-      <!-- <Pre>{{ project }}</Pre> -->
-      <UDashboardPanelContent v-if="client && project && loaded">
-        <UDashboardSection
-          :title="`${client.name} - ${project.info.name}`"
-          description="Proyecto activo"
-          orientation="vertical"
-          class="mt-6 px-4"
-          :ui="{
-            title: 'text-3xl font-bold',
-          }"
-          :links="
-            project.images
-              ? [
-                  {
-                    label: 'Ver imagenes generadas',
-                    color: 'lime',
-                    icon: 'i-heroicons-photo',
-                    variant: 'outline',
-                    click: () => {
-                      saved = true;
+
+      <!-- Main Content -->
+      <UDashboardPanelContent v-if="loaded">
+        <template v-if="client && project">
+          <UDashboardSection
+            :title="`${client.name} - ${project.info.name}`"
+            description="Proyecto activo"
+            orientation="vertical"
+            class="mt-6 px-4"
+            :ui="{
+              title: 'text-3xl font-bold',
+            }"
+            :links="
+              project.images?.length > 0
+                ? [
+                    {
+                      label: 'Ver imagenes generadas',
+                      color: 'lime',
+                      icon: 'i-heroicons-photo',
+                      variant: 'outline',
+                      click: () => {
+                        saved = true;
+                      },
                     },
-                  },
-                ]
-              : []
-          "
-        >
-          <template #icon>
-            <UAvatar :alt="project.info.name" size="xl" class="bg-rose-100 text-rose-800" />
-          </template>
-        </UDashboardSection>
-
-        <UDivider />
-
-        <UPageGrid
-          v-if="project && project.templates"
-          :ui="{
-            wrapper: 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-2 pt-2',
-          }"
-        >
-          <DCOTemplate
-            v-for="(template, index) in project.templates"
-            :key="index"
-            :template="template"
-            :client="client"
-            :project="project"
+                  ]
+                : []
+            "
           >
-          </DCOTemplate>
-        </UPageGrid>
+            <template #icon>
+              <UAvatar :alt="project.info.name" size="xl" class="bg-rose-100 text-rose-800" />
+            </template>
+          </UDashboardSection>
+
+          <UDivider />
+
+          <!-- Templates Grid -->
+          <UPageGrid
+            v-if="project.templates"
+            :ui="{
+              wrapper:
+                'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-2 pt-2',
+            }"
+          >
+            <DCOTemplate
+              v-for="(template, index) in project.templates"
+              :key="template.id || index"
+              :template="template"
+              :client="client"
+              :project="project"
+            />
+          </UPageGrid>
+        </template>
+        <Skeleton v-else />
       </UDashboardPanelContent>
-      <Skeleton v-else />
+
+      <!-- Side Panel -->
       <DCOSide
         v-if="project"
         v-model:saved="saved"
@@ -197,3 +246,9 @@ const handleRemoveImage = async (image: string) => {
     </UDashboardPanel>
   </UDashboardPage>
 </template>
+
+<style scoped>
+.dco-template-page {
+  min-height: 100vh;
+}
+</style>

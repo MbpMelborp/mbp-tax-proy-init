@@ -12,7 +12,7 @@ const props = defineProps<{
   <UCard v-if="client.id" :ui="ui.card_ui" class="dco-template">
     <template #header>
       <div class="flex items-center justify-between">
-        <h3 class="text-lg font-bold">{{ template.name }}</h3>
+        <h3 class="truncate font-mono text-lg font-semibold">{{ template.name }}</h3>
         <UButton
           icon="heroicons-information-circle"
           size="sm"
