@@ -11,6 +11,8 @@ export default defineNuxtConfig({
     "nuxt-vuefire",
     "nuxt-svgo",
     "@formkit/auto-animate/nuxt",
+    "@morev/vue-transitions/nuxt",
+    "@hypernym/nuxt-gsap",
   ],
   // components: [
   //   {
@@ -29,7 +31,8 @@ export default defineNuxtConfig({
 
   routeRules: {
     // Temporary workaround for prerender regression. see https://github.com/nuxt/nuxt/issues/27490
-    "/": { prerender: true },
+    // "/": { prerender: true },
+    "/api/__session": { ssr: false }, // Add this line
   },
 
   future: {
@@ -69,8 +72,10 @@ export default defineNuxtConfig({
   },
   vuefire: {
     auth: {
-      enabled: true,
+      // enabled: true,
+      // ssr: true,
       sessionCookie: true,
+      enabled: true,
     },
     config: {
       apiKey: "AIzaSyDfjf-e5_aqbAeFx-QPHeN5D3Gna-EfZ4M",
@@ -98,15 +103,14 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
-    prerender: {
-      // these routes are not dependent on any data and can be prerendered
-      // it's a good idea to pre render all routes that you can
-      // routes: ["/", "/analytics"],
-      ignore: ["/"],
-    },
+    // prerender: {
+    //   // these routes are not dependent on any data and can be prerendered
+    //   // it's a good idea to pre render all routes that you can
+    //   // routes: ["/", "/analytics"],
+    //   // ignore: ["/"],
+    // },
     // preset: "firebase",
-    preset: "vercel-edge",
-
+    // preset: "vercel-edge",
     // for the upcoming preset
     firebase: {
       gen: 2,

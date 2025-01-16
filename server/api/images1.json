@@ -1,0 +1,1479 @@
+{
+  "images": [
+    {
+      "created_at": "2025-01-16T16:06:40.958Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/NgL30amMOYek15XG6prJxBoye",
+      "uid": "NgL30amMOYek15XG6prJxBoye",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/344/NgL30amMOYek15XG6prJxBoye/3bd7c3a051a3b5fa8d24a52c603cca0ff9f63823.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/344/NgL30amMOYek15XG6prJxBoye/3bd7c3a051a3b5fa8d24a52c603cca0ff9f63823.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/344/NgL30amMOYek15XG6prJxBoye/3bd7c3a051a3b5fa8d24a52c603cca0ff9f63823.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326940139789foto_publico.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma2",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#E93EC1"
+        },
+        {
+          "name": "titular",
+          "text": "¡Vive 3 días de conversaciones de nuestra cultura, nuestro mundo y nuestra historia!",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Asegura tu entrada hoy!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.945Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/VJqEKwxkyzGZg8pKYNP8dj4vL",
+      "uid": "VJqEKwxkyzGZg8pKYNP8dj4vL",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/343/VJqEKwxkyzGZg8pKYNP8dj4vL/d174ed56c1e7d13e4d792de7f1150868317bc057.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/343/VJqEKwxkyzGZg8pKYNP8dj4vL/d174ed56c1e7d13e4d792de7f1150868317bc057.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/343/VJqEKwxkyzGZg8pKYNP8dj4vL/d174ed56c1e7d13e4d792de7f1150868317bc057.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326940139789foto_publico.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "forma2",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#E93EC1"
+        },
+        {
+          "name": "titular",
+          "text": "\"¿Ya tienes planes para este 24, 25 y 26 de enero?",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Reserva tu lugar ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.947Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/nE38ekNX9Qnro38aQMamprWxZ",
+      "uid": "nE38ekNX9Qnro38aQMamprWxZ",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/342/nE38ekNX9Qnro38aQMamprWxZ/95559d716ea7ebc393411224faeeef3f7ec7787c.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/342/nE38ekNX9Qnro38aQMamprWxZ/95559d716ea7ebc393411224faeeef3f7ec7787c.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/342/nE38ekNX9Qnro38aQMamprWxZ/95559d716ea7ebc393411224faeeef3f7ec7787c.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326940139789foto_publico.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma1",
+          "color": "#7BC995"
+        },
+        {
+          "name": "forma2",
+          "color": "#7BC995"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "titular",
+          "text": "Tu oportunidad de reunirte con los escritores y periodistas que más admiras está en Jericó este 24, 25 y 26 de enero.",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Asegura tu entrada hoy!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.939Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/KPbegp4noQkmM08jzlVkN03vE",
+      "uid": "KPbegp4noQkmM08jzlVkN03vE",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/341/KPbegp4noQkmM08jzlVkN03vE/68da4ccab204d0ab79d2a50afc5576a0f05e3156.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/341/KPbegp4noQkmM08jzlVkN03vE/68da4ccab204d0ab79d2a50afc5576a0f05e3156.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/341/KPbegp4noQkmM08jzlVkN03vE/68da4ccab204d0ab79d2a50afc5576a0f05e3156.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326013423090foto_entrevista.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#7BC995"
+        },
+        {
+          "name": "forma2",
+          "color": "#7BC995"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#E93EC1"
+        },
+        {
+          "name": "titular",
+          "text": "\"¿Ya tienes planes para este 24, 25 y 26 de enero?",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "\"¡No te lo pierdas, compra ya!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.936Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/5R7NlW8nEzjkmA816mvbxgLyP",
+      "uid": "5R7NlW8nEzjkmA816mvbxgLyP",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/340/5R7NlW8nEzjkmA816mvbxgLyP/fc028004b79491d07d7b63cbd3b67dc2bade6489.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/340/5R7NlW8nEzjkmA816mvbxgLyP/fc028004b79491d07d7b63cbd3b67dc2bade6489.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/340/5R7NlW8nEzjkmA816mvbxgLyP/fc028004b79491d07d7b63cbd3b67dc2bade6489.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326940139789foto_publico.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma2",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#E93EC1"
+        },
+        {
+          "name": "titular",
+          "text": "\"¿Ya tienes planes para este 24, 25 y 26 de enero?",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Vive la experiencia, inscríbete ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.936Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/on98ymlOAQyvXGK9YvM5pkw3R",
+      "uid": "on98ymlOAQyvXGK9YvM5pkw3R",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/339/on98ymlOAQyvXGK9YvM5pkw3R/7db306dd06aca5749a510baf8a1b58a71632f5aa.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/339/on98ymlOAQyvXGK9YvM5pkw3R/7db306dd06aca5749a510baf8a1b58a71632f5aa.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/339/on98ymlOAQyvXGK9YvM5pkw3R/7db306dd06aca5749a510baf8a1b58a71632f5aa.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326940139789foto_publico.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma2",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "titular",
+          "text": "Tu oportunidad de reunirte con los escritores y periodistas que más admiras está en Jericó este 24, 25 y 26 de enero.",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Vive la experiencia, inscríbete ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.936Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/Klp7yZbnLzXkPyBvY3jOX9rmG",
+      "uid": "Klp7yZbnLzXkPyBvY3jOX9rmG",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/338/Klp7yZbnLzXkPyBvY3jOX9rmG/2439bb7f4017b63b4ed61e445f69b3fd9ec9663f.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/338/Klp7yZbnLzXkPyBvY3jOX9rmG/2439bb7f4017b63b4ed61e445f69b3fd9ec9663f.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/338/Klp7yZbnLzXkPyBvY3jOX9rmG/2439bb7f4017b63b4ed61e445f69b3fd9ec9663f.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326940139789foto_publico.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "forma2",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#E93EC1"
+        },
+        {
+          "name": "titular",
+          "text": "\"¿Ya tienes planes para este 24, 25 y 26 de enero?",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Vive la experiencia, inscríbete ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.934Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/ZwVbKlDe9Y8OLlqeQ8moa3jPM",
+      "uid": "ZwVbKlDe9Y8OLlqeQ8moa3jPM",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/337/ZwVbKlDe9Y8OLlqeQ8moa3jPM/ebe3cd36c71c9de09e6046b4e7993751d0e4bea2.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/337/ZwVbKlDe9Y8OLlqeQ8moa3jPM/ebe3cd36c71c9de09e6046b4e7993751d0e4bea2.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/337/ZwVbKlDe9Y8OLlqeQ8moa3jPM/ebe3cd36c71c9de09e6046b4e7993751d0e4bea2.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326940139789foto_publico.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma2",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "titular",
+          "text": "Tu oportunidad de reunirte con los escritores y periodistas que más admiras está en Jericó este 24, 25 y 26 de enero.",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "\"¡No te lo pierdas, compra ya!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.931Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/PwAV5rMNq6OZ8kL0zkBm274Op",
+      "uid": "PwAV5rMNq6OZ8kL0zkBm274Op",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/336/PwAV5rMNq6OZ8kL0zkBm274Op/711052ed1d5abbb4741a2fb260e505bf487e2ddc.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/336/PwAV5rMNq6OZ8kL0zkBm274Op/711052ed1d5abbb4741a2fb260e505bf487e2ddc.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/336/PwAV5rMNq6OZ8kL0zkBm274Op/711052ed1d5abbb4741a2fb260e505bf487e2ddc.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326872014274foto_musica.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma1",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "forma2",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#E93EC1"
+        },
+        {
+          "name": "titular",
+          "text": "Un encuentro con las mentes que más admiras está a un clic de distancia.",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "\"¡No te lo pierdas, compra ya!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.924Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/MRj52Zwoa6xm8rZDQxWkdO3eE",
+      "uid": "MRj52Zwoa6xm8rZDQxWkdO3eE",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/335/MRj52Zwoa6xm8rZDQxWkdO3eE/139a87d125db2732f781f92cdbb3ff7bd36e6847.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/335/MRj52Zwoa6xm8rZDQxWkdO3eE/139a87d125db2732f781f92cdbb3ff7bd36e6847.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/335/MRj52Zwoa6xm8rZDQxWkdO3eE/139a87d125db2732f781f92cdbb3ff7bd36e6847.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326940139789foto_publico.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma1",
+          "color": "#7BC995"
+        },
+        {
+          "name": "forma2",
+          "color": "#7BC995"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "titular",
+          "text": "\"¿Ya tienes planes para este 24, 25 y 26 de enero?",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Reserva tu lugar ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.920Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/JWBKNELpyQ2wb30PYPvbX5R93",
+      "uid": "JWBKNELpyQ2wb30PYPvbX5R93",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/334/JWBKNELpyQ2wb30PYPvbX5R93/504e9b5717a60b3968f89087c7c19da5944524d9.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/334/JWBKNELpyQ2wb30PYPvbX5R93/504e9b5717a60b3968f89087c7c19da5944524d9.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/334/JWBKNELpyQ2wb30PYPvbX5R93/504e9b5717a60b3968f89087c7c19da5944524d9.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326940139789foto_publico.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma2",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#E93EC1"
+        },
+        {
+          "name": "titular",
+          "text": "¡Vive 3 días de conversaciones de nuestra cultura, nuestro mundo y nuestra historia!",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Reserva tu lugar ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.910Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/Lvpkalx2D6BnM8wM6WE7rB3Xq",
+      "uid": "Lvpkalx2D6BnM8wM6WE7rB3Xq",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/333/Lvpkalx2D6BnM8wM6WE7rB3Xq/3f268d415ecc566d7b829816011117c4b0bd62a2.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/333/Lvpkalx2D6BnM8wM6WE7rB3Xq/3f268d415ecc566d7b829816011117c4b0bd62a2.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/333/Lvpkalx2D6BnM8wM6WE7rB3Xq/3f268d415ecc566d7b829816011117c4b0bd62a2.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326940139789foto_publico.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma2",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#E93EC1"
+        },
+        {
+          "name": "titular",
+          "text": "Un encuentro con las mentes que más admiras está a un clic de distancia.",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Reserva tu lugar ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.881Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/jMDOvP3KezRrjnRLzlqoyk8AW",
+      "uid": "jMDOvP3KezRrjnRLzlqoyk8AW",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/332/jMDOvP3KezRrjnRLzlqoyk8AW/d8b9a545f6086c079875f14bbb28878dc7e02a56.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/332/jMDOvP3KezRrjnRLzlqoyk8AW/d8b9a545f6086c079875f14bbb28878dc7e02a56.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/332/jMDOvP3KezRrjnRLzlqoyk8AW/d8b9a545f6086c079875f14bbb28878dc7e02a56.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326940139789foto_publico.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma1",
+          "color": "#7BC995"
+        },
+        {
+          "name": "forma2",
+          "color": "#7BC995"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "titular",
+          "text": "Tu oportunidad de reunirte con los escritores y periodistas que más admiras está en Jericó este 24, 25 y 26 de enero.",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Vive la experiencia, inscríbete ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.875Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/g4ZpR2ONeYJZR8lmYEqvo9WBA",
+      "uid": "g4ZpR2ONeYJZR8lmYEqvo9WBA",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/331/g4ZpR2ONeYJZR8lmYEqvo9WBA/9c72cfbc855f57338be7f3e025a5ebdf93640e65.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/331/g4ZpR2ONeYJZR8lmYEqvo9WBA/9c72cfbc855f57338be7f3e025a5ebdf93640e65.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/331/g4ZpR2ONeYJZR8lmYEqvo9WBA/9c72cfbc855f57338be7f3e025a5ebdf93640e65.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326940139789foto_publico.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "forma2",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#E93EC1"
+        },
+        {
+          "name": "titular",
+          "text": "\"¿Ya tienes planes para este 24, 25 y 26 de enero?",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Asegura tu entrada hoy!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.872Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/LWXrA1qRoQv2xMG3QypMJegBj",
+      "uid": "LWXrA1qRoQv2xMG3QypMJegBj",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/330/LWXrA1qRoQv2xMG3QypMJegBj/5f2629ba70bf0502c5d159906b18cce465927db0.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/330/LWXrA1qRoQv2xMG3QypMJegBj/5f2629ba70bf0502c5d159906b18cce465927db0.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/330/LWXrA1qRoQv2xMG3QypMJegBj/5f2629ba70bf0502c5d159906b18cce465927db0.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326872014274foto_musica.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma1",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma2",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "titular",
+          "text": "Un encuentro con las mentes que más admiras está a un clic de distancia.",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "\"¡No te lo pierdas, compra ya!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.858Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/nyLXxdvaNQgm4q9Kz9wePZm1E",
+      "uid": "nyLXxdvaNQgm4q9Kz9wePZm1E",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/329/nyLXxdvaNQgm4q9Kz9wePZm1E/f8e24e2d16470f91d4c107ce7e73ab449338c888.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/329/nyLXxdvaNQgm4q9Kz9wePZm1E/f8e24e2d16470f91d4c107ce7e73ab449338c888.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/329/nyLXxdvaNQgm4q9Kz9wePZm1E/f8e24e2d16470f91d4c107ce7e73ab449338c888.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326013423090foto_entrevista.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma1",
+          "color": "#7BC995"
+        },
+        {
+          "name": "forma2",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#E93EC1"
+        },
+        {
+          "name": "titular",
+          "text": "¡Vive 3 días de conversaciones de nuestra cultura, nuestro mundo y nuestra historia!",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Vive la experiencia, inscríbete ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.820Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/XwJBnmPj46wBODn9zvLqob2xG",
+      "uid": "XwJBnmPj46wBODn9zvLqob2xG",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/328/XwJBnmPj46wBODn9zvLqob2xG/eb9c8d631706862451a8984e9849d1c76181cb5a.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/328/XwJBnmPj46wBODn9zvLqob2xG/eb9c8d631706862451a8984e9849d1c76181cb5a.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/328/XwJBnmPj46wBODn9zvLqob2xG/eb9c8d631706862451a8984e9849d1c76181cb5a.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326872014274foto_musica.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#7BC995"
+        },
+        {
+          "name": "forma2",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#E93EC1"
+        },
+        {
+          "name": "titular",
+          "text": "¡Vive 3 días de conversaciones de nuestra cultura, nuestro mundo y nuestra historia!",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Reserva tu lugar ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.811Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/8A5gBlRXpzomwdy3Qn2x19qkE",
+      "uid": "8A5gBlRXpzomwdy3Qn2x19qkE",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/327/8A5gBlRXpzomwdy3Qn2x19qkE/004b4361ba64596850525c23323ad799371cccdd.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/327/8A5gBlRXpzomwdy3Qn2x19qkE/004b4361ba64596850525c23323ad799371cccdd.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/327/8A5gBlRXpzomwdy3Qn2x19qkE/004b4361ba64596850525c23323ad799371cccdd.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326102126229foto_entrevista_close.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma2",
+          "color": "#7BC995"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#E93EC1"
+        },
+        {
+          "name": "titular",
+          "text": "\"¿Ya tienes planes para este 24, 25 y 26 de enero?",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Vive la experiencia, inscríbete ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.807Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/VA54EW2ZqQryJ4Rx6egGPNXJl",
+      "uid": "VA54EW2ZqQryJ4Rx6egGPNXJl",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/326/VA54EW2ZqQryJ4Rx6egGPNXJl/d74ae60a6f228b1fa991464c92dee1a403f9597e.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/326/VA54EW2ZqQryJ4Rx6egGPNXJl/d74ae60a6f228b1fa991464c92dee1a403f9597e.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/326/VA54EW2ZqQryJ4Rx6egGPNXJl/d74ae60a6f228b1fa991464c92dee1a403f9597e.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326872014274foto_musica.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#7BC995"
+        },
+        {
+          "name": "forma2",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#E93EC1"
+        },
+        {
+          "name": "titular",
+          "text": "Tu oportunidad de reunirte con los escritores y periodistas que más admiras está en Jericó este 24, 25 y 26 de enero.",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Reserva tu lugar ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.806Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/NnaW7b28GYDZr8wP64VwORxZl",
+      "uid": "NnaW7b28GYDZr8wP64VwORxZl",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/325/NnaW7b28GYDZr8wP64VwORxZl/59e215a4a16dfe8b39175fd506be83557bacefb9.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/325/NnaW7b28GYDZr8wP64VwORxZl/59e215a4a16dfe8b39175fd506be83557bacefb9.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/325/NnaW7b28GYDZr8wP64VwORxZl/59e215a4a16dfe8b39175fd506be83557bacefb9.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326872014274foto_musica.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "forma2",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "titular",
+          "text": "\"¿Ya tienes planes para este 24, 25 y 26 de enero?",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Vive la experiencia, inscríbete ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.792Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/DqR2v1kNaYMZx8lkz8epZrOWP",
+      "uid": "DqR2v1kNaYMZx8lkz8epZrOWP",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/324/DqR2v1kNaYMZx8lkz8epZrOWP/b5d6d8c2486f8cf67d42ea7214b5c1b5d0bd08e3.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/324/DqR2v1kNaYMZx8lkz8epZrOWP/b5d6d8c2486f8cf67d42ea7214b5c1b5d0bd08e3.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/324/DqR2v1kNaYMZx8lkz8epZrOWP/b5d6d8c2486f8cf67d42ea7214b5c1b5d0bd08e3.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326872014274foto_musica.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#7BC995"
+        },
+        {
+          "name": "forma2",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#E93EC1"
+        },
+        {
+          "name": "titular",
+          "text": "¡Vive 3 días de conversaciones de nuestra cultura, nuestro mundo y nuestra historia!",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Vive la experiencia, inscríbete ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.780Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/7gAk4KJj8Qmmr9ZoQvwqxrD20",
+      "uid": "7gAk4KJj8Qmmr9ZoQvwqxrD20",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/323/7gAk4KJj8Qmmr9ZoQvwqxrD20/f74e17c3e7ff9cdb72a5d0f90c68a335b5af3257.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/323/7gAk4KJj8Qmmr9ZoQvwqxrD20/f74e17c3e7ff9cdb72a5d0f90c68a335b5af3257.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/323/7gAk4KJj8Qmmr9ZoQvwqxrD20/f74e17c3e7ff9cdb72a5d0f90c68a335b5af3257.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326872014274foto_musica.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#7BC995"
+        },
+        {
+          "name": "forma2",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "titular",
+          "text": "Un encuentro con las mentes que más admiras está a un clic de distancia.",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Vive la experiencia, inscríbete ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:40.763Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/KZA1qL8r0zlmDLwL6epakDXbM",
+      "uid": "KZA1qL8r0zlmDLwL6epakDXbM",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/322/KZA1qL8r0zlmDLwL6epakDXbM/ff452198a9e005292e5d6285d202925cb1e1b724.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/322/KZA1qL8r0zlmDLwL6epakDXbM/ff452198a9e005292e5d6285d202925cb1e1b724.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/322/KZA1qL8r0zlmDLwL6epakDXbM/ff452198a9e005292e5d6285d202925cb1e1b724.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326102126229foto_entrevista_close.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "forma2",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "titular",
+          "text": "\"¿Ya tienes planes para este 24, 25 y 26 de enero?",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Vive la experiencia, inscríbete ahora!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:06:10.705Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/aMBJ5DWdLYPZX8lW6XRNjrp4Z",
+      "uid": "aMBJ5DWdLYPZX8lW6XRNjrp4Z",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/293/aMBJ5DWdLYPZX8lW6XRNjrp4Z/b5d5c708bdd121d45e255bcbe34802e79230d75c.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/293/aMBJ5DWdLYPZX8lW6XRNjrp4Z/b5d5c708bdd121d45e255bcbe34802e79230d75c.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/293/aMBJ5DWdLYPZX8lW6XRNjrp4Z/b5d5c708bdd121d45e255bcbe34802e79230d75c.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326013423090foto_entrevista.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#B0E0E6"
+        },
+        {
+          "name": "forma2",
+          "color": "#7BC995"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "titular",
+          "text": "¡Vive 3 días de conversaciones de nuestra cultura, nuestro mundo y nuestra historia!",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "\"¡No te lo pierdas, compra ya!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    },
+    {
+      "created_at": "2025-01-16T16:05:53.630Z",
+      "status": "completed",
+      "self": "https://api.bannerbear.com/v2/images/7gAk4KJj8Qmmr9B7QvwqxrD20",
+      "uid": "7gAk4KJj8Qmmr9B7QvwqxrD20",
+      "image_url": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/267/7gAk4KJj8Qmmr9B7QvwqxrD20/e8b93302df9956bf94eddb7d258b2115698139a1.png",
+      "image_url_png": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/267/7gAk4KJj8Qmmr9B7QvwqxrD20/e8b93302df9956bf94eddb7d258b2115698139a1.png",
+      "image_url_jpg": "https://images.bannerbear.com/direct/Qkpreb1BO4OzPn8NAW/requests/000/078/513/267/7gAk4KJj8Qmmr9B7QvwqxrD20/e8b93302df9956bf94eddb7d258b2115698139a1.jpg",
+      "template": "wXmzGBDaLEKY5LN7gj",
+      "template_version": null,
+      "modifications": [
+        {
+          "name": "foto",
+          "image_url": "http://creator.melborp.co/uploads/wXmzGBDaLEKY5LN7gj-foto-173704326872014274foto_musica.jpg"
+        },
+        {
+          "name": "mask",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma1",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "forma2",
+          "color": "#CDACFA"
+        },
+        {
+          "name": "forma3",
+          "color": "#BDDDF7"
+        },
+        {
+          "name": "logo",
+          "color": "#E93EC1"
+        },
+        {
+          "name": "titular",
+          "text": "Tu oportunidad de reunirte con los escritores y periodistas que más admiras está en Jericó este 24, 25 y 26 de enero.",
+          "color": null,
+          "background": null
+        },
+        {
+          "name": "call to action",
+          "text": "¡Asegura tu entrada hoy!",
+          "color": null,
+          "background": null
+        }
+      ],
+      "webhook_url": null,
+      "webhook_response_code": null,
+      "transparent": false,
+      "metadata": null,
+      "template_name": "historia 3",
+      "width": 1080,
+      "height": 1920,
+      "render_pdf": false,
+      "pdf_url": null,
+      "pdf_url_compressed": null
+    }
+  ]
+}

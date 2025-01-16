@@ -1,54 +1,47 @@
 export const useImg = () => {
-  const loadingStates = ref<Map<string, boolean>>(new Map());
+  const loading = ref<Record<string, boolean>>({});
   const error = ref<string | null>(null);
 
-  const isLoading = (imageUrl: string): boolean => {
-    return loadingStates.value.get(imageUrl) || false;
-  };
+  const isLoading = (url: string): boolean => loading.value[url] || false;
 
-  const setLoading = (imageUrl: string, loading: boolean) => {
-    loadingStates.value.set(imageUrl, loading);
-  };
-
-  const copyImage = async (imageUrl: string): Promise<boolean> => {
+  const copyImage = async (url: string): Promise<boolean> => {
+    loading.value[url] = true;
     try {
-      setLoading(imageUrl, true);
-      const response = await fetch(imageUrl);
+      const response = await fetch(url);
       const blob = await response.blob();
-      await navigator.clipboard.write([
-        new ClipboardItem({
-          [blob.type]: blob,
-        }),
-      ]);
+      await navigator.clipboard.write([new ClipboardItem({ [blob.type]: blob })]);
+      useToast().add({ title: "Imagen copiada", color: "green" });
       return true;
     } catch (err) {
       error.value = "Failed to copy image";
+      useToast().add({ title: "Error al copiar imagen", color: "red" });
       return false;
     } finally {
-      setLoading(imageUrl, false);
+      loading.value[url] = false;
     }
   };
 
-  const downloadImage = async (imageUrl: string): Promise<boolean> => {
+  const downloadImage = async (url: string): Promise<boolean> => {
+    loading.value[url] = true;
     try {
-      setLoading(imageUrl, true);
-      const response = await fetch(imageUrl);
+      const response = await fetch(url);
       const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      const fileName = imageUrl.split("/").pop() || "image";
-      link.href = url;
-      link.download = fileName;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(url);
+      const blobUrl = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = blobUrl;
+      a.download = url.split("/").pop() || "image";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      window.URL.revokeObjectURL(blobUrl);
+      useToast().add({ title: "Descarga iniciada", color: "green" });
       return true;
     } catch (err) {
       error.value = "Failed to download image";
+      useToast().add({ title: "Error al descargar imagen", color: "red" });
       return false;
     } finally {
-      setLoading(imageUrl, false);
+      loading.value[url] = false;
     }
   };
 

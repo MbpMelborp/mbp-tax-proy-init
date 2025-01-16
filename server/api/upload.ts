@@ -34,7 +34,7 @@ export default defineEventHandler(async (event) => {
     // Process the upload using a Promise wrapper around formidable
     const data = await new Promise((resolve, reject) => {
       form.parse(event.node.req, (err, fields, files) => {
-        console.log("files ", files);
+        // console.log("files ", files);
         const image = files.image;
 
         // Handle parsing errors

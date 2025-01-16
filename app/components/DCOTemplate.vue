@@ -38,12 +38,12 @@ const props = defineProps<{
           <strong>Tamaño:</strong>
           <span>{{ template.width }} x {{ template.height }}</span>
         </li>
-        <li class="flex flex-col gap-1">
+        <!-- <li class="flex flex-col gap-1">
           <strong>Creado:</strong>
           <span>
             {{ new Date(Date.parse(template.created_at)).toLocaleString("es-CO") }}
           </span>
-        </li>
+        </li> -->
       </ul>
     </div>
 

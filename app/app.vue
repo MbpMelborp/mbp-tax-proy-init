@@ -33,10 +33,9 @@ useHead({
     },
   ],
   bodyAttrs: {
-    class:
-      // "bg-primary-200 dark:bg-primary-800 text-primary-800 dark:text-primary-50" +
-
-      process.env.NODE_ENV === "development" ? " debug-screens" : "",
+    // class:
+    //   // "bg-primary-200 dark:bg-primary-800 text-primary-800 dark:text-primary-50" +
+    //   process.env.NODE_ENV === "development" ? " debug-screens" : "",
   },
 });
 

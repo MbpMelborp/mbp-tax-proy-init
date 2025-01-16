@@ -3,7 +3,8 @@ import { useFirestore, useDocument } from "vuefire";
 import { doc, updateDoc } from "firebase/firestore";
 import { z } from "zod";
 import type { FormSubmitEvent } from "#ui/types";
-import type { Client, Project } from "~/types/";
+import type { Client } from "@/types/Client";
+import type { Project } from "@/types/Project";
 
 // Composables
 const dco = useDCO();
@@ -102,12 +103,12 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
           uid: event.data.uid,
           api: event.data.api,
           name: event.data.name,
+          images: [],
         },
       ],
     });
-
-    await fetchProjects();
     open.value = false;
+    await fetchProjects();
 
     useToast().add({
       title: "Proyecto creado exitosamente",
@@ -160,7 +161,7 @@ definePageMeta({
         </template>
 
         <template #right>
-          <UTooltip text="Notifications" :shortcuts="['N']">
+          <!--   <UTooltip text="Notifications" :shortcuts="['N']">
             <UButton
               color="gray"
               variant="ghost"
@@ -171,7 +172,8 @@ definePageMeta({
                 <UIcon name="i-heroicons-bell" class="h-5 w-5" />
               </UChip>
             </UButton>
-          </UTooltip>
+          </UTooltip> -->
+          <UColorModeToggle />
         </template>
       </UDashboardNavbar>
 
@@ -187,7 +189,7 @@ definePageMeta({
             :ui="{ title: 'text-3xl font-bold' }"
           >
             <template #icon>
-              <UAvatar :alt="client.name" size="xl" class="bg-rose-100 text-rose-800" />
+              <UAvatar :alt="client.name" size="xl" class="bg-primary-400 text-white" />
             </template>
             <template #links>
               <UButton

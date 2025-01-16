@@ -87,7 +87,7 @@ onMounted(() => {
         <h1 class="text-2xl font-semibold leading-6">{{ client.name }}</h1>
       </template>
       <template #icon>
-        <UAvatar :alt="client.name" size="xl" class="bg-rose-100 text-rose-800" />
+        <UAvatar :alt="client.name" size="xl" class="bg-primary-400 text-white" />
       </template>
 
       <template #default>
@@ -122,7 +122,7 @@ onMounted(() => {
               :ui="{
                 item: 'basis-full',
                 container:
-                  'relative w-full flex overflow-x-auto snap-x snap-mandatory scroll-smooth',
+                  'relative w-full flex overflow-x-auto snap-x snap-mandatory scroll-smooth p-8',
               }"
               :prev-button="{
                 color: 'gray',

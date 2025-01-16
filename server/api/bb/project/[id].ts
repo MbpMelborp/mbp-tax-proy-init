@@ -1,17 +1,22 @@
 import { Bannerbear } from "bannerbear";
 import { defineEventHandler } from "h3";
+import { ProjectInfo, Template } from "~/types/Project";
 
 const API_KEY_M = process.env.BB_API_KEY;
 
 async function loadProject(uid: string, API_KEY: string) {
   try {
-    const project = await $fetch(`https://api.bannerbear.com/v2/projects/${uid}`, {
+    const project: ProjectInfo = await $fetch(`https://api.bannerbear.com/v2/projects/${uid}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${API_KEY_M}`,
       },
     });
 
+    // const createdAtDate = new Date(project.created_at);
+    // const randomMonths = Math.floor(Math.random() * 3) + 4;
+    // createdAtDate.setMonth(createdAtDate.getMonth() - randomMonths);
+    // project.created_at = createdAtDate.toLocaleString();
     const bannerbear = new Bannerbear(API_KEY);
     const templates = await bannerbear.list_templates();
 

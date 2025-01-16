@@ -95,3 +95,5 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+npm run build -- --preset=firebase
+firebase deploy --only functions:server,hosting:mbptxp

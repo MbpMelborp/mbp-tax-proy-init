@@ -8,6 +8,10 @@ import { ref as storageRef, getDownloadURL, deleteObject } from "firebase/storag
 import { useFirebaseStorage, useStorageFile } from "vuefire";
 import projects from "~~/server/api/bb/projects";
 
+import type { ImageBB } from "@/types/Projects";
+
+const { $gsap } = useNuxtApp();
+
 const toast = useToast();
 
 const dco = useDCO();
@@ -101,7 +105,7 @@ const model = template?.available_modifications
   : ref([]);
 
 interface ResponseData {
-  images: { image_url: string }[];
+  images: ImageBB[];
 }
 
 const resp = ref<ResponseData | null>(null);
@@ -126,10 +130,14 @@ model.value.forEach((element) => {
   });
 });
 const resultados = ref<HTMLElement | null>(null);
-const onSubmit = async () => {
-  console.log("submit");
-  ok.value = false;
+const wrapper = ref<HTMLElement | null>(null);
 
+const ready = ref(false);
+
+const onSubmit = async () => {
+  ok.value = false;
+  // Wait for 4 seconds
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   resp.value = await $fetch("/api/", {
     method: "POST",
     body: { template: template?.uid, data: model.value, api: api.value },
@@ -140,69 +148,84 @@ const onSubmit = async () => {
     image.open = false;
   });
   ok.value = true;
-  if (resultados.value) {
-    if (resultados.value.scrollIntoView) resultados.value.scrollIntoView({ behavior: "smooth" });
-  }
+  ready.value = true;
+  nextTick(async () => {
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    if (resultados.value && resultados.value instanceof HTMLElement) {
+      resultados.value.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    }
+  });
 };
+
 const saved = ref(false);
 const savedImages = ref<string[]>([]);
+const loadImage = ref(false);
+const upploadProgress = ref(0);
+const fetchImageBlob = async (url: string): Promise<Blob> => {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+    return await response.blob();
+  } catch (error) {
+    console.error("Error fetching image:", error);
+    throw new Error("Failed to fetch image");
+  }
+};
 
 const saveImage = async (id: string, indexi: number) => {
+  loadImage.value = true;
   try {
-    // Get image element
-    const img = document.getElementById(id) as HTMLImageElement;
-    if (!img) {
-      throw new Error("Image element not found");
-    }
+    saved.value = true;
 
-    // Set crossOrigin before setting src
-    img.crossOrigin = "anonymous";
+    const imgElement = document.getElementById(id);
+    const imgSrc = imgElement?.getAttribute("src");
+    if (!imgSrc) throw new Error("Image source not found");
 
-    // Create a promise to ensure image is loaded
-    await new Promise((resolve, reject) => {
-      img.onload = resolve;
-      img.onerror = reject;
-      const currentSrc = img.src;
-      img.src = currentSrc;
-    });
-
-    // Create canvas with proper dimensions
-    const canvas = document.createElement("canvas");
-    canvas.width = img.naturalWidth * 2;
-    canvas.height = img.naturalHeight * 2;
-
-    // Get context
-    const context = canvas.getContext("2d");
-    if (!context) {
-      throw new Error("Could not get canvas context");
-    }
-
-    // Generate file name
     const file_name = `dco/${route.params.client}/${route.params.project}/${route.params.template}-${indexi}.png`;
-
-    // Get storage reference
     const storage = useFirebaseStorage();
     const fileRef = storageRef(storage, file_name);
-    const { upload, url } = useStorageFile(fileRef);
+    const { upload, url, uploadProgress } = useStorageFile(fileRef);
 
-    // Draw image to canvas
-    context.drawImage(img, 0, 0, canvas.width, canvas.height);
-
-    // Convert to blob
-    const blob = await new Promise<Blob | null>((resolve) => {
-      canvas.toBlob(resolve, "image/png", 1.0); // Added quality parameter
+    watch(uploadProgress, async (progress) => {
+      $gsap.to(upploadProgress, { value: Math.round(progress * 100), duration: 0.5 });
+      if (upploadProgress.value === 100) {
+        loadImage.value = false;
+        await new Promise((resolve) => setTimeout(resolve, 500));
+        nextTick(async () => {
+          document.getElementById(`imgp_${indexi}`)?.scrollIntoView({ behavior: "smooth" });
+        });
+      }
     });
+    // Usar la función de utilidad
+    const blob = await fetchImageBlob(imgSrc);
+    // Try upload with retries
+    const maxRetries = 3;
+    let retryCount = 0;
 
-    if (!blob) {
-      throw new Error("Failed to create blob from canvas");
-    }
+    while (retryCount < maxRetries) {
+      try {
+        await upload(blob);
+        await new Promise((resolve) => setTimeout(resolve, 1000)); // Wait for URL to be available
 
-    // Upload and wait for completion
-    await upload(blob);
+        if (url.value) {
+          break; // Success, exit loop
+        }
 
-    // Wait for URL to be available
-    if (!url.value) {
-      throw new Error("Failed to get upload URL");
+        retryCount++;
+        if (retryCount === maxRetries) {
+          throw new Error("Failed to get upload URL after multiple attempts");
+        }
+      } catch (uploadError) {
+        if (retryCount === maxRetries - 1) {
+          throw uploadError;
+        }
+        await new Promise((resolve) => setTimeout(resolve, 2000)); // Wait before retry
+        retryCount++;
+      }
     }
 
     // Create a deep copy of projects
@@ -245,8 +268,6 @@ const saveImage = async (id: string, indexi: number) => {
       timeout: 5000,
     });
 
-    saved.value = true;
-
     // Optional: Refresh client data to ensure sync
     const refreshedDoc = await getDoc(docRef);
     if (refreshedDoc.exists()) {
@@ -255,6 +276,7 @@ const saveImage = async (id: string, indexi: number) => {
         ...refreshedDoc.data(),
       };
     }
+    loadImage.value = false;
   } catch (error) {
     console.error("Save image error:", error);
     toast.add({
@@ -540,7 +562,7 @@ const removeImage = async (url: string) => {
         </template>
 
         <template #right>
-          <UTooltip text="Notifications" :shortcuts="['N']">
+          <!--   <UTooltip text="Notifications" :shortcuts="['N']">
             <UButton
               color="gray"
               variant="ghost"
@@ -551,10 +573,11 @@ const removeImage = async (url: string) => {
                 <UIcon name="i-heroicons-bell" class="h-5 w-5" />
               </UChip>
             </UButton>
-          </UTooltip>
+          </UTooltip> -->
+          <UColorModeToggle />
         </template>
       </UDashboardNavbar>
-      <UDashboardPanelContent>
+      <UDashboardPanelContent ref="wrapper" v-auto-animate>
         <!-- <form @submit.prevent="uploadPicture">
           <fieldset :disabled="!!uploadTask">
             <button type="button" @click="open({ accept: 'image/*', multiple: false })">
@@ -597,7 +620,7 @@ const removeImage = async (url: string) => {
           "
         >
           <template #icon>
-            <UAvatar :alt="project.info.name" size="xl" class="bg-rose-100 text-rose-800" />
+            <UAvatar :alt="project.info.name" size="xl" class="bg-primary-400 text-white" />
           </template>
         </UDashboardSection>
 
@@ -625,12 +648,12 @@ const removeImage = async (url: string) => {
                 <h3>Modificaciones:</h3>
                 <p>{{ template?.available_modifications.length }}</p>
               </li>
-              <li>
+              <!-- <li>
                 <h3>Creado:</h3>
                 <p>
                   {{ new Date(Date.parse(template?.created_at)).toLocaleString("es-CO") }}
                 </p>
-              </li>
+              </li> -->
               <li>
                 <h3>Actualizado:</h3>
                 <p>
@@ -645,8 +668,18 @@ const removeImage = async (url: string) => {
             :ui="{
               title: 'text-xl font-bold',
             }"
+            :class="ready ? 'relative h-[40vh] overflow-clip' : ''"
           >
-            <form @submit.prevent="onSubmit">
+            <div
+              v-if="ready"
+              class="absolute z-20 flex h-[40vh] w-full items-center justify-center bg-gradient-to-b from-gray-100/0 to-gray-100/80 dark:from-gray-900/0 dark:to-gray-900/80"
+            >
+              <UButton @click="ready = false">Editar</UButton>
+            </div>
+            <form
+              @submit.prevent="onSubmit"
+              :class="ready ? 'pointer-events-none z-0 select-none opacity-30 blur-sm' : ''"
+            >
               <UPageGrid
                 :ui="{
                   wrapper: 'grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-8',
@@ -692,11 +725,10 @@ const removeImage = async (url: string) => {
               @click="onSubmit"
             />
           </section>
-          <div v-if="resp">
+          <div v-if="resp" ref="resultados">
             <UDivider class="my-4" />
             <UDashboardCard
               v-if="resp.images.length > 0"
-              ref="resultados"
               title="Imágenes"
               :description="`Cantidad de imágenes generadas ${resp.images.length}`"
               class="min-h-48"
@@ -708,7 +740,16 @@ const removeImage = async (url: string) => {
                 }"
               >
                 <UPageCard v-for="(image, indexi) in resp.images" :key="indexi">
-                  <img :id="'download-' + indexi" :src="image.image_url" alt="" />
+                  <nuxt-img
+                    :id="'download-' + indexi"
+                    :src="image.image_url"
+                    alt=""
+                    :width="image.width"
+                    :height="image.height"
+                    :style="{ opacity: 0, transition: `opacity 0.5s ease ${indexi * 0.1}s` }"
+                    @load="(event) => (event.target.style.opacity = 1)"
+                    :class="`aspect-[${image.width}/${image.height}]`"
+                  />
                   <template #footer>
                     <div class="flex items-center justify-between gap-2">
                       <UButton
@@ -777,8 +818,10 @@ const removeImage = async (url: string) => {
                         </div>
                       </UCard>
                     </UModal>
-                  </template> </UPageCard
-              ></UPageGrid>
+                  </template>
+                </UPageCard>
+                ></UPageGrid
+              >
             </UDashboardCard>
             <UDashboardSection
               v-else
@@ -814,11 +857,16 @@ const removeImage = async (url: string) => {
         </template>
       </UDashboardPanelContent>
       <UDashboardSlideover v-model="saved" title="Guardadas">
+        <UProgress v-if="loadImage" :value="upploadProgress" animation="carousel" />
         <UPageGrid
           :ui="{ wrapper: 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-2 gap-2' }"
         >
-          <UCard v-for="(image, index) in currentProject.images" :key="index" :ui="ui.card_ui">
-            <nuxt-img :src="image" class="mb-2 w-full" />
+          <UCard
+            v-for="(image, index) in [...currentProject.images].reverse()"
+            :key="index"
+            :ui="ui.card_ui"
+          >
+            <nuxt-img :src="image" class="mb-2 w-full" :id="`imgp_${index}`" />
 
             <template #footer>
               <div class="flex items-center justify-between gap-2">

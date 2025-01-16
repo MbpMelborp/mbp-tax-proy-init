@@ -16,10 +16,14 @@ async function loadAllProjects() {
     }
 
     const projects = await response.json();
-    console.log(projects);
+    // console.log(projects);
     return projects;
   } catch (error) {
-    console.error("Failed to load projects:", error);
+    throw createError({
+      statusCode: 500,
+      statusMessage: "Error in loading projects",
+      data: { error: (error as Error).message },
+    });
   }
 }
 

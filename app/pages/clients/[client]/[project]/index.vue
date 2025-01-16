@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { useCurrentUser, useFirestore, useCollection, useDocument } from "vuefire";
-import { collection, doc } from "firebase/firestore";
-import type { Project, Client } from "~/types/";
+import { Firestore, collection, doc } from "firebase/firestore";
+import type { Client } from "@/types/Client";
+import type { Project } from "@/types/Project";
 
 // Composables
 const dco = useDCO();
@@ -18,7 +19,7 @@ const saved = ref(false);
 // Firebase
 const db = useFirestore();
 const user = useCurrentUser();
-const doc_client = doc(collection(db, "dco"), route.params.client);
+const doc_client = doc(collection(db as Firestore, "dco"), route.params.client);
 const contactSource = computed(() => doc_client);
 const client_ref = useDocument(contactSource);
 
@@ -165,7 +166,7 @@ definePageMeta({
         </template>
 
         <template #right>
-          <UTooltip text="Notifications" :shortcuts="['N']">
+          <!--   <UTooltip text="Notifications" :shortcuts="['N']">
             <UButton
               color="gray"
               variant="ghost"
@@ -176,7 +177,8 @@ definePageMeta({
                 <UIcon name="i-heroicons-bell" class="h-5 w-5" />
               </UChip>
             </UButton>
-          </UTooltip>
+          </UTooltip> -->
+          <UColorModeToggle />
         </template>
       </UDashboardNavbar>
 
@@ -208,7 +210,7 @@ definePageMeta({
             "
           >
             <template #icon>
-              <UAvatar :alt="project.info.name" size="xl" class="bg-rose-100 text-rose-800" />
+              <UAvatar :alt="project.info.name" size="xl" class="bg-primary-400 text-white" />
             </template>
           </UDashboardSection>
 

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { useCurrentUser, useFirestore, useCollection } from "vuefire";
+import { useFirestore, useCollection } from "vuefire";
 import { collection, addDoc } from "firebase/firestore";
 import { z } from "zod";
 import type { FormSubmitEvent } from "#ui/types";
-import type { Client } from "~/types";
+import type { Client } from "@/types/Client";
 
 // State
 const loaded = ref(false);
@@ -11,9 +11,8 @@ const open = ref(false);
 const clients = ref<Client[]>([]);
 
 // Composables
-const user = useCurrentUser();
+
 const db = useFirestore();
-const route = useRoute();
 const { isNotificationsSlideoverOpen, links } = useDashboard();
 
 // Firebase Collection
@@ -111,7 +110,7 @@ definePageMeta({
         </template>
 
         <template #right>
-          <UTooltip text="Notifications" :shortcuts="['N']">
+          <!--   <UTooltip text="Notifications" :shortcuts="['N']">
             <UButton
               color="gray"
               variant="ghost"
@@ -122,7 +121,8 @@ definePageMeta({
                 <UIcon name="i-heroicons-bell" class="h-5 w-5" />
               </UChip>
             </UButton>
-          </UTooltip>
+          </UTooltip> -->
+          <UColorModeToggle />
         </template>
       </UDashboardNavbar>
 

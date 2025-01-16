@@ -1,67 +1,11 @@
 {
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
-  },
-  "functions": [
+  "functions": { "source": ".output/server" },
+  "hosting": [
     {
-      "source": "functions",
-      "codebase": "default",
-      "ignore": [
-        "node_modules",
-        ".git",
-        "firebase-debug.log",
-        "firebase-debug.*.log"
-      ],
-      "predeploy": ["npm --prefix \"$RESOURCE_DIR\" run build"]
-    },
-    {
-      "source": "functions-py",
-      "codebase": "py",
-      "ignore": ["venv", ".git", "firebase-debug.log", "firebase-debug.*.log"],
-      "predeploy": [
-        "source functions-py/venv/bin/activate && python3.12 -m pip install -r functions-py/requirements.txt"
-      ]
+      "site": "mbptxp",
+      "public": ".output/public",
+      "cleanUrls": true,
+      "rewrites": [{ "source": "**", "function": "server" }]
     }
-  ],
-  "hosting": {
-    "source": ".",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "frameworksBackend": {
-      "region": "us-central1"
-    }
-  },
-  "storage": {
-    "rules": "storage.rules"
-  },
-  "emulators": {
-    "auth": {
-      "port": 9099
-    },
-    "functions": {
-      "port": 5001
-    },
-    "firestore": {
-      "port": 8080
-    },
-    "hosting": {
-      "port": 5002
-    },
-    "pubsub": {
-      "port": 8085
-    },
-    "storage": {
-      "port": 9199
-    },
-    "eventarc": {
-      "port": 9299
-    },
-    "ui": {
-      "enabled": true
-    },
-    "singleProjectMode": true
-  },
-  "remoteconfig": {
-    "template": "remoteconfig.template.json"
-  }
+  ]
 }

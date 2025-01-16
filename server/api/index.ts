@@ -61,14 +61,14 @@ export default defineEventHandler(async (event) => {
     // organizar el arreglo
     const variaciones: any[] = [];
     body.forEach((modificacion, index) => {
-      console.log("modificacion \n", modificacion, "\n");
+      // console.log("modificacion \n", modificacion, "\n");
       variaciones[index] = desag(modificacion);
     });
 
     const combinaciones = variaciones.reduce((a, b) =>
       a.reduce((r: any, v: any) => r.concat(b.map((w: any) => [].concat(v, w))), [])
     );
-    console.log("Cantidad de combinaciones : \n", combinaciones.length, combinaciones);
+    // console.log("Cantidad de combinaciones : \n", combinaciones.length, combinaciones);
     interface Modification {
       name: string[];
       color?: string[] | null;
@@ -87,7 +87,7 @@ export default defineEventHandler(async (event) => {
           true
         )
         .catch((err: any) => {
-          console.log("err ", err);
+          // console.log("err ", err);
           return err;
         });
     });
