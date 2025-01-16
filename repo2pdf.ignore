@@ -1,0 +1,27 @@
+{
+    "ignoredFiles": [
+        ".nuxt",
+        ".output",
+        "README.md",
+        "firebase.json",
+        "package.json",
+        "renovate.json",
+        "tailwind",
+        "node_modules",
+        "pnpm-lock.yaml",
+        "repo2pdf.ignore",
+        "content",    
+        "prettier.config.cjs",
+        "tsconfig.json",
+        "eslint.config.mjs",
+        "package-lock.json",
+        "public",
+        "service-account.json",
+        ".env",
+        ".env_example",
+        ".eslintignore",
+        ".eslintrc.cjs",
+        ".firebaserc"
+    ],
+    "ignoredExtensions": [".log", ".tmp", ".js", ".css", ".json"]
+}

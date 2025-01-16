@@ -1,99 +1,75 @@
-# Proyecto MBP Tax Proy Init
+# Proyecto Tributario - MBP
 
-Este proyecto es una aplicación web desarrollada con Nuxt UI Pro. Su objetivo principal es proporcionar una interfaz de usuario minimalista y profesional para gestionar tareas relacionadas con impuestos. La aplicación incluye funcionalidades para la gestión de datos fiscales, generación de reportes y análisis de información tributaria.
+## Descripción General
+El Proyecto Tributario de MBP es una aplicación diseñada para gestionar y optimizar procesos relacionados con impuestos utilizando Nuxt UI Pro. Ofrece una interfaz minimalista y profesional que permite a los usuarios realizar tareas de forma eficiente, segura y escalable.
 
-## Características principales
+## Objetivos del Proyecto
+El proyecto tiene como objetivo:
 
-- Interfaz de usuario moderna y responsiva.
-- Integración con servicios de terceros para la obtención de datos fiscales.
-- Generación de reportes personalizados.
-- Análisis y visualización de datos tributarios.
-- Autenticación y autorización de usuarios.
+1. **Automatización**: Implementar sistemas para la generación de piezas publicitarias digitales y gestión de flujos de trabajo.
+2. **Integración**: Conectar múltiples plataformas como Meta, TikTok, Google y YouTube para la optimización creativa dinámica (DCO).
+3. **Medición y Control**: Establecer métricas y KPIs para evaluar calidad, eficiencia y performance.
+4. **Escalabilidad**: Gestionar flujos personalizados por cliente y monitorear el rendimiento en tiempo real.
 
-![nuxt-ui-minimal-starter-social-card](https://github.com/nuxt-ui-pro/starter/assets/739984/2ab2f391-718f-4188-95db-20b8768bbf9d)
+## Estructura del Proyecto
 
-# Nuxt UI Pro - Starter
+### Principales Directorios
+- **app/**: Componentes principales de la aplicación.
+- **content/**: Contenido estático utilizado en la aplicación.
+- **public/**: Recursos públicos como imágenes y archivos.
+- **server/**: Lógica del servidor para manejar solicitudes.
 
-This starter lets you get started with [Nuxt UI Pro](https://ui.nuxt.com/pro) quickly.
+### Archivos Importantes
+- **nuxt.config.ts**: Configuración principal de Nuxt.js.
+- **package.json**: Dependencias y scripts del proyecto.
+- **tailwind.config.ts**: Configuración para Tailwind CSS.
 
-[![Nuxt UI Pro](https://img.shields.io/badge/Made%20with-Nuxt%20UI%20Pro-00DC82?logo=nuxt.js&labelColor=020420)](https://ui.nuxt.com/pro)
+## Configuración e Instalación
 
-- [Live demo](https://ui-pro-starter.nuxt.dev)
-- [Play on Stackblitz](https://stackblitz.com/github/nuxt-ui-pro/starter)
-- [Documentation](https://ui.nuxt.com/pro/getting-started)
+### Prerrequisitos
+- Node.js versión 16 o superior.
+- NPM o Yarn.
 
-[![Deploy to NuxtHub](https://hub.nuxt.com/button.svg)](https://hub.nuxt.com/new?repo=nuxt-ui-pro/starter)
+### Pasos para Configuración
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/MbpMelborp/mbp-tax-proy-init.git
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Ejecuta la aplicación en modo de desarrollo:
+   ```bash
+   npm run dev
+   ```
+4. Accede a la aplicación en tu navegador:
+   ```
+   http://localhost:3000
+   ```
 
-## Setup
+## Funcionalidades Clave
+- **Gestión Dinámica**: Automatización de la creación de piezas publicitarias con DCO.
+- **Medición y Reportes**: Evaluación en tiempo real del rendimiento.
+- **Escalabilidad**: Configuración personalizada por cliente y mercado.
 
-Make sure to install the dependencies:
+## Tecnologías Utilizadas
+- **Framework**: Nuxt.js con Nuxt UI Pro.
+- **Estilos**: Tailwind CSS.
+- **Automatización**: RPA y sistemas de integración como Bannerbear.
+- **Backend**: Node.js y configuraciones específicas para API.
 
-```bash
-# npm
-npm install
+## Contribución
+Si deseas colaborar en este proyecto, sigue estos pasos:
+1. Haz un fork del repositorio.
+2. Crea una nueva rama para tus cambios:
+   ```bash
+   git checkout -b feature/nueva-funcionalidad
+   ```
+3. Realiza un pull request detallando tus contribuciones.
 
-# pnpm
-pnpm install
+## Contacto
+Para más información, por favor contacta al equipo de desarrollo o revisa la documentación interna del proyecto.
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-npm run build -- --preset=firebase
-firebase deploy --only functions:server,hosting:mbptxp
+---
+**Nota**: Este proyecto forma parte de una iniciativa estratégica para optimizar procesos tributarios y publicitarios con herramientas avanzadas de automatización.

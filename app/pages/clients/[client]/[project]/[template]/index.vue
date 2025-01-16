@@ -138,7 +138,7 @@ const onSubmit = async () => {
   ok.value = false;
   // Wait for 4 seconds
   await new Promise((resolve) => setTimeout(resolve, 2000));
-  resp.value = await $fetch("/api/", {
+  resp.value = await $fetch("/api/proy/", {
     method: "POST",
     body: { template: template?.uid, data: model.value, api: api.value },
   });

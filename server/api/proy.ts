@@ -13,6 +13,6 @@ export default defineEventHandler(async (event) => {
   if (event.req.method === "POST") {
     const { template, data, api } = await readBody(event);
     // const images = await bb.list_images(3);
-    return { images: [...images1.images, ...images2.images, ...images3.images] };
+    return { images: [...images1.images] };
   }
 });
