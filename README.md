@@ -13,15 +13,39 @@ El proyecto tiene como objetivo:
 
 ## Estructura del Proyecto
 
-### Principales Directorios
-- **app/**: Componentes principales de la aplicación.
-- **content/**: Contenido estático utilizado en la aplicación.
-- **public/**: Recursos públicos como imágenes y archivos.
-- **server/**: Lógica del servidor para manejar solicitudes.
+El proyecto está organizado en los siguientes directorios y archivos principales:
+
+### Estructura de Directorios
+```plaintext
+mbp-tax-proy-init/
+├── app/
+│   ├── components/
+│   ├── layouts/
+│   ├── pages/
+│   └── store/
+├── content/
+│   ├── articles/
+│   └── images/
+├── public/
+│   ├── icons/
+│   └── images/
+├── server/
+│   ├── api/
+│   └── middleware/
+├── nuxt.config.ts
+├── package.json
+└── tailwind.config.ts
+```
+
+### Directorios Principales
+- **app/**: Contiene los componentes principales de la aplicación.
+- **content/**: Incluye el contenido estático utilizado en la aplicación.
+- **public/**: Almacena recursos públicos como imágenes y archivos.
+- **server/**: Contiene la lógica del servidor para manejar solicitudes.
 
 ### Archivos Importantes
-- **nuxt.config.ts**: Configuración principal de Nuxt.js.
-- **package.json**: Dependencias y scripts del proyecto.
+- **nuxt.config.ts**: Archivo de configuración principal de Nuxt.js.
+- **package.json**: Define las dependencias y scripts del proyecto.
 - **tailwind.config.ts**: Configuración para Tailwind CSS.
 
 ## Configuración e Instalación

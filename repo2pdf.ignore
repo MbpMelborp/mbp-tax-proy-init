@@ -1,5 +1,8 @@
 {
     "ignoredFiles": [
+        ".firebase",
+        ".editorconfig",
+        ".DS_Store",
         ".nuxt",
         ".output",
         "README.md",
@@ -23,5 +26,5 @@
         ".eslintrc.cjs",
         ".firebaserc"
     ],
-    "ignoredExtensions": [".log", ".tmp", ".js", ".css", ".json"]
+    "ignoredExtensions": [".org",".cache",".DS_Store",".log", ".tmp", ".js", ".css", ".json"]
 }
